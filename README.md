@@ -2,7 +2,7 @@
 Plugin.Maui.Popup - is a cross-platform plugin for .NET MAUI , Used for displaying content on Popup.
 
 
-<h2> How To Use </h2> 
+## How To Use 
 Available on NuGet: https://www.nuget.org/packages/Plugin.Maui.Popup/1.0.3  
 
 Install this Plugin in your .NET MAUI Project
@@ -45,21 +45,21 @@ public partial class PopupPage : BasePopupPage
 	}
 }
 ```
-<h2> How To Display Popup Page </h2> 
+## How To Display Popup Page
 Use following code to display Popup Page
 
 ```
 MauiPopup.PopupAction.DisplayPopup(new PopupPage());
 ```
 
-<h2> How To Close Popup Page </h2> 
+## How To Close Popup Page
 Use following code to close Popup Page
 
 ```
 MauiPopup.PopupAction.ClosePopup();
 ```
 
-<h2> Popup Page Formation Property </h2>  
+## Popup Page Formation Property
 
 1. HorizontalOptions : To Adjust Layout Horizontally
 2. VerticalOptions : To Adjust Layout Vertically

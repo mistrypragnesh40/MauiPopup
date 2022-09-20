@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiPopup.Views.BasePopupPage"
+             x:Name="this"
+             Title="BasePopupPage">
+    <ContentPage.ControlTemplate>
+        <ControlTemplate>
+            <Grid>
+                <StackLayout  Grid.Row="0"
+                        VerticalOptions="FillAndExpand"   
+                        HorizontalOptions="FillAndExpand" >
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference this},Path=PopModelCommand}" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <Frame HasShadow="False" 
+                       CornerRadius="0"
+                       Margin="{Binding Source={x:Reference this},Path=Margin}"
+                       Padding="0"
+                       Grid.Row="0"  VerticalOptions="{Binding Source={x:Reference this},Path=VerticalOptions}"   
+                              HorizontalOptions="{Binding Source={x:Reference this},Path=HorizontalOptions}" 
+                             BackgroundColor="{Binding Source={x:Reference this},Path=ForegroundColor}">
+                    <ContentPresenter />
+                </Frame>
+
+            </Grid>
+        </ControlTemplate>
+    </ContentPage.ControlTemplate>
+</ContentPage>

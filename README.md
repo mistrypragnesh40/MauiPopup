@@ -31,7 +31,6 @@ PopupPage.xaml
 ```
 
 PopupPage.xaml.cs
-
 ```
 using MauiPopup.Views;
  

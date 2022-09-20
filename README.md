@@ -45,3 +45,25 @@ public partial class PopupPage : BasePopupPage
 	}
 }
 ```
+<h2> How To Display Popup Page </h2> 
+Use following code to display Popup Page
+
+```
+MauiPopup.PopupAction.DisplayPopup(new PopupPage());
+```
+
+<h2> How To Close Popup Page </h2> 
+Use following code to close Popup Page
+
+```
+MauiPopup.PopupAction.ClosePopup();
+```
+
+<h2> Popup Page Formation Property </h2>  
+
+1. HorizontalOptions : To Adjust Layout Horizontally
+2. VerticalOptions : To Adjust Layout Vertically
+3. IsCloseOnBackgroundClick : Set it to true to close popup on background Click. (By Default True)
+4. Margin : Set Margin of Layout.
+5. ForegroundColor : Used To Set Background Color Of Popup Content.
+

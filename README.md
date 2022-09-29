@@ -58,6 +58,25 @@ Use following code to close Popup Page
 MauiPopup.PopupAction.ClosePopup();
 ```
 
+## How To Get Value On Popup Close
+
+Pass Any Type of Value On Close PopupMethod
+```
+PopupAction.ClosePopup("hi");
+```
+
+To Get String Value
+```
+string result = await MauiPopup.PopupAction.DisplayPopup(new PopupPage());
+```
+
+To Get Other Type of  Value
+```
+string result = await MauiPopup.PopupAction.DisplayPopup<int>(new PopupPage());
+string result = await MauiPopup.PopupAction.DisplayPopup<bool>(new PopupPage());
+string result = await MauiPopup.PopupAction.DisplayPopup<AnyTypeOfClass>(new PopupPage());
+```
+
 ## Popup Page Formation Property
 
 1. HorizontalOptions : To Adjust Layout Horizontally

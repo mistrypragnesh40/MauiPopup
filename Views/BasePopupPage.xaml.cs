@@ -1,9 +1,12 @@
+using Microsoft.Maui.Controls;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace MauiPopup.Views;
 
 public partial class BasePopupPage : ContentPage
 {
+    public TaskCompletionSource<object> returnResultTask = new();
     public BasePopupPage()
     {
         InitializeComponent();
@@ -14,6 +17,7 @@ public partial class BasePopupPage : ContentPage
             ForegroundColor = Colors.White;
         }
     }
+
 
     public static readonly BindableProperty ForegroundColorProperty = BindableProperty.Create(
    propertyName: nameof(ForegroundColor),
@@ -28,12 +32,13 @@ public partial class BasePopupPage : ContentPage
         set { SetValue(ForegroundColorProperty, value); }
     }
 
-    public bool IsCloseOnBackgroundClick { get; set; }
+    public bool IsCloseOnBackgroundClick { get; set; } = true;
 
     public static readonly BindableProperty VerticalOptionsProperty = BindableProperty.Create(
          propertyName: nameof(VerticalOptions),
          returnType: typeof(LayoutOptions),
          declaringType: typeof(BasePopupPage),
+         defaultValue: LayoutOptions.Center,
          defaultBindingMode: BindingMode.OneWay);
 
     public LayoutOptions VerticalOptions
@@ -46,6 +51,7 @@ public partial class BasePopupPage : ContentPage
         propertyName: nameof(HorizontalOptions),
         returnType: typeof(LayoutOptions),
         declaringType: typeof(BasePopupPage),
+        defaultValue: LayoutOptions.Center,
         defaultBindingMode: BindingMode.OneWay);
 
     public LayoutOptions HorizontalOptions
@@ -71,7 +77,7 @@ public partial class BasePopupPage : ContentPage
             await PopupAction.ClosePopup();
     });
 
-   
+
     protected override bool OnBackButtonPressed()
     {
         if (!IsCloseOnBackgroundClick)

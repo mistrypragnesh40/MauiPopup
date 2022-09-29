@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
@@ -20,22 +20,19 @@
 		<Authors>Pragnesh Mistry</Authors>
 		<Description>Plugin.Maui.Popup Is used for displaying content in modal.</Description>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.0</Version>
-		<PackageIcon>popup.png</PackageIcon>
+		<Version>1.0.4</Version>
+		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>MAUI Popup, Popup</PackageTags>
 		<PackageProjectUrl>https://xamarincodingtutorial.blogspot.com/2022/09/pluginmauipopup.html</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="popup.png" />
+	  <None Remove="icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="popup.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </EmbeddedResource>
+		<None Include="icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -43,5 +40,4 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
-
 </Project>

@@ -3,7 +3,7 @@ Plugin.Maui.Popup - is a cross-platform plugin for .NET MAUI , Used for displayi
 
 
 ## How To Use 
-Available on NuGet: https://www.nuget.org/packages/Plugin.Maui.Popup/1.0.3  
+Available on NuGet: https://www.nuget.org/packages/Plugin.Maui.Popup/1.0.4  
 
 Install this Plugin in your .NET MAUI Project
 

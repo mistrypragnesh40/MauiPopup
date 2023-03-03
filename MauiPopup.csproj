@@ -20,7 +20,7 @@
 		<Authors>Pragnesh Mistry</Authors>
 		<Description>Plugin.Maui.Popup Is used for displaying content in modal.</Description>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>1.0.4</Version>
+		<Version>1.0.5</Version>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageTags>MAUI Popup, Popup</PackageTags>
 		<PackageProjectUrl>https://xamarincodingtutorial.blogspot.com/2022/09/pluginmauipopup.html</PackageProjectUrl>

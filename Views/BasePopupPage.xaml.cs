@@ -11,11 +11,11 @@ public partial class BasePopupPage : ContentPage
     {
         InitializeComponent();
         var current_theme = Application.Current.RequestedTheme;
+        this.BackgroundColor = Color.FromArgb("#80000000");
         if (current_theme == AppTheme.Light)
-        {
-            this.BackgroundColor = Color.FromArgb("#80000000");
             ForegroundColor = Colors.White;
-        }
+        else
+            ForegroundColor = Color.FromArgb("#ff282828");
     }
 
 

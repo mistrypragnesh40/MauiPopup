@@ -10,9 +10,8 @@ namespace MauiPopup
             try
             {
                 if (Application.Current?.MainPage != null)
-                {
                     await Application.Current.MainPage.Navigation.PushModalAsync(page);
-                }
+
                 return (T)await page.returnResultTask.Task;
             }
             catch (Exception ex)

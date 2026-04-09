@@ -5,8 +5,8 @@ namespace MauiPopup.Services
         internal static Page GetCurrentPage()
         {
 #pragma warning disable CS0618 // Suppress MainPage deprecation for backward compat
-            return Application.Current?.MainPage
-                ?? Application.Current?.Windows?.FirstOrDefault()?.Page;
+            return Microsoft.Maui.Controls.Application.Current?.MainPage
+                ?? Microsoft.Maui.Controls.Application.Current?.Windows?.FirstOrDefault()?.Page;
 #pragma warning restore CS0618
         }
 

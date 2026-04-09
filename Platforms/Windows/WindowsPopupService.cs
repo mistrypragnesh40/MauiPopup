@@ -210,7 +210,7 @@ namespace MauiPopup.Platforms.Windows
 
         private static Microsoft.UI.Xaml.Window GetCurrentWindow()
         {
-            var mauiWindow = Application.Current?.Windows?.FirstOrDefault();
+            var mauiWindow = Microsoft.Maui.Controls.Application.Current?.Windows?.FirstOrDefault();
             return mauiWindow?.Handler?.PlatformView as Microsoft.UI.Xaml.Window;
         }
 

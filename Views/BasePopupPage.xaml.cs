@@ -15,7 +15,7 @@ public partial class BasePopupPage : ContentPage
     public BasePopupPage()
     {
         InitializeComponent();
-        var current_theme = Application.Current.RequestedTheme;
+        var current_theme = Microsoft.Maui.Controls.Application.Current.RequestedTheme;
         BackgroundColor = Colors.Transparent;
         if (current_theme == AppTheme.Light)
             ForegroundColor = Colors.White;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.ReturnObjectPopup">
+
+    <VerticalStackLayout Padding="20" Spacing="15" WidthRequest="300">
+        <Label Text="Return Typed Object"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="Fill in user details:"
+               HorizontalTextAlignment="Center" />
+
+        <Entry x:Name="NameEntry" Placeholder="Name" />
+        <Entry x:Name="AgeEntry" Placeholder="Age" Keyboard="Numeric" />
+
+        <Button Text="Submit" Clicked="OnSubmitClicked" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</mauiPopup:BasePopupPage>

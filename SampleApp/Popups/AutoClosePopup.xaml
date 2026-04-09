@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.AutoClosePopup">
+
+    <VerticalStackLayout Padding="25" Spacing="15" WidthRequest="300">
+        <Label Text="Auto-Close Popup"
+               FontSize="20" FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="TimerLabel"
+               HorizontalTextAlignment="Center"
+               TextColor="Gray" />
+
+        <ActivityIndicator IsRunning="True"
+                           Color="{StaticResource Primary}"
+                           HorizontalOptions="Center" />
+
+        <Label Text="This popup will close automatically. You can also tap the background or press the button to close it early."
+               HorizontalTextAlignment="Center"
+               FontSize="13" />
+
+        <Button Text="Close Now"
+                Clicked="OnCloseClicked"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</mauiPopup:BasePopupPage>

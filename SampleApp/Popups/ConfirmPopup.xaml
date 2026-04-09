@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.ConfirmPopup">
+
+    <Frame Padding="20" CornerRadius="10" WidthRequest="300">
+        <VerticalStackLayout Spacing="15">
+            <Label Text="Confirm Action"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Are you sure you want to proceed with this action?"
+                   HorizontalTextAlignment="Center" />
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button Text="Yes" Clicked="OnYesClicked" BackgroundColor="Green" TextColor="White" />
+                <Button Text="No" Clicked="OnNoClicked" BackgroundColor="Red" TextColor="White" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Frame>
+
+</mauiPopup:BasePopupPage>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.AnimationPage"
+             Title="Animations">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Animations"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Different popup animation styles"
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="Fade (Default)" FontAttributes="Bold" />
+            <Label Text="Smooth opacity transition" FontSize="12" TextColor="Gray" />
+            <Button Text="Show Fade Popup" Clicked="OnFadeClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Scale (Zoom)" FontAttributes="Bold" />
+            <Label Text="Zooms in from 80% to 100%" FontSize="12" TextColor="Gray" />
+            <Button Text="Show Scale Popup" Clicked="OnScaleClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Slide Up" FontAttributes="Bold" />
+            <Label Text="Slides from bottom of screen" FontSize="12" TextColor="Gray" />
+            <Button Text="Show Slide Up Popup" Clicked="OnSlideUpClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Slide Down" FontAttributes="Bold" />
+            <Label Text="Slides from top of screen" FontSize="12" TextColor="Gray" />
+            <Button Text="Show Slide Down Popup" Clicked="OnSlideDownClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="No Animation" FontAttributes="Bold" />
+            <Label Text="Instant appear/disappear" FontSize="12" TextColor="Gray" />
+            <Button Text="Show Instant Popup" Clicked="OnNoneClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Slow Fade (400ms)" FontAttributes="Bold" />
+            <Label Text="Custom duration — 2x slower" FontSize="12" TextColor="Gray" />
+            <Button Text="Show Slow Fade Popup" Clicked="OnSlowFadeClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Slide Up + Bottom Sheet" FontAttributes="Bold" />
+            <Label Text="SlideUp animation with bottom position" FontSize="12" TextColor="Gray" />
+            <Button Text="Show Animated Bottom Sheet" Clicked="OnAnimatedBottomSheetClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

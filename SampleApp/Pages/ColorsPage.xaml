@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.ColorsPage"
+             Title="Colors">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Colors"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="ForegroundColor, OverlayColor, BackgroundColor"
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <!-- ForegroundColor demos -->
+            <Label Text="ForegroundColor" FontAttributes="Bold" FontSize="18" />
+            <Label Text="Sets the popup content area background" FontSize="12" TextColor="Gray" />
+
+            <Button Text="White (Default Light)" Clicked="OnFgWhiteClicked" />
+            <Button Text="Light Blue" Clicked="OnFgLightBlueClicked" />
+            <Button Text="Light Yellow" Clicked="OnFgYellowClicked" />
+            <Button Text="Light Coral" Clicked="OnFgCoralClicked" />
+            <Button Text="Transparent (No Card BG)" Clicked="OnFgTransparentClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <!-- OverlayColor demos -->
+            <Label Text="OverlayColor" FontAttributes="Bold" FontSize="18" />
+            <Label Text="Sets the semi-transparent overlay behind the popup" FontSize="12" TextColor="Gray" />
+
+            <Button Text="Default (50% Black)" Clicked="OnOverlayDefaultClicked" />
+            <Button Text="Dark (80% Black)" Clicked="OnOverlayDarkClicked" />
+            <Button Text="Light (20% Black)" Clicked="OnOverlayLightClicked" />
+            <Button Text="Blue Tint" Clicked="OnOverlayBlueClicked" />
+            <Button Text="Red Tint" Clicked="OnOverlayRedClicked" />
+            <Button Text="No Overlay (Transparent)" Clicked="OnOverlayNoneClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <!-- Combined -->
+            <Label Text="Combined Styles" FontAttributes="Bold" FontSize="18" />
+            <Label Text="ForegroundColor + OverlayColor together" FontSize="12" TextColor="Gray" />
+
+            <Button Text="Dark Theme Popup" Clicked="OnDarkThemeClicked" />
+            <Button Text="Success Theme (Green)" Clicked="OnSuccessThemeClicked" />
+            <Button Text="Warning Theme (Orange)" Clicked="OnWarningThemeClicked" />
+            <Button Text="Frosted Glass Effect" Clicked="OnFrostedGlassClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

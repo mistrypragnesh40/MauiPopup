@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.CloseAllPage"
+             Title="CloseAllPopups">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="CloseAllPopups"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Closes all open popups at once — useful for navigation changes or logout scenarios."
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="Stack and Close All" FontAttributes="Bold" />
+            <Label Text="Opens 3 stacked popups, waits 1.5 seconds, then closes all at once."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Open 3 and Close All" Clicked="OnCloseAllClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SampleApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:SampleApp.Pages"
+    Title="Plugin.Maui.Popup v2.0">
+
+    <TabBar>
+        <ShellContent Title="Basic" Icon="{x:Null}"
+                      ContentTemplate="{DataTemplate pages:BasicPage}" />
+
+        <ShellContent Title="Animations" Icon="{x:Null}"
+                      ContentTemplate="{DataTemplate pages:AnimationPage}" />
+
+        <ShellContent Title="Layouts" Icon="{x:Null}"
+                      ContentTemplate="{DataTemplate pages:LayoutPage}" />
+
+        <ShellContent Title="Advanced" Icon="{x:Null}"
+                      ContentTemplate="{DataTemplate pages:AdvancedPage}" />
+
+        <ShellContent Title="Colors" Icon="{x:Null}"
+                      ContentTemplate="{DataTemplate pages:ColorsPage}" />
+    </TabBar>
+
+</Shell>

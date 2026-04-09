@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.ContentPaddingPage"
+             Title="ContentPadding">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="ContentPadding"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Add inner padding between popup border and content."
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="Small Padding" FontAttributes="Bold" />
+            <Label Text="ContentPadding = 10 on all sides."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Padding = 10" Clicked="OnSmallClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Large Padding" FontAttributes="Bold" />
+            <Label Text="ContentPadding = 30 on all sides."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Padding = 30" Clicked="OnLargeClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Asymmetric Padding" FontAttributes="Bold" />
+            <Label Text="Different padding per side (10, 30, 10, 30)."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Padding (10, 30, 10, 30)" Clicked="OnAsymmetricClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.CornerRadiusPopup">
+
+    <VerticalStackLayout Padding="30" Spacing="15" WidthRequest="300">
+        <Label Text="Rounded Popup"
+               FontSize="20" FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="RadiusLabel"
+               HorizontalTextAlignment="Center"
+               TextColor="Gray" />
+
+        <Label Text="This popup uses the CornerRadius property on BasePopupPage — no Frame needed!"
+               HorizontalTextAlignment="Center"
+               FontSize="13" />
+
+        <Button Text="Close"
+                Clicked="OnCloseClicked"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</mauiPopup:BasePopupPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.ReturnStringPopup">
+
+    <VerticalStackLayout Padding="20" Spacing="15" WidthRequest="300">
+        <Label Text="Return String"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="Type something and press OK to return it:"
+               HorizontalTextAlignment="Center" />
+
+        <Entry x:Name="InputEntry"
+               Placeholder="Enter text here..." />
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="OK" Clicked="OnOkClicked" />
+            <Button Text="Cancel" Clicked="OnCancelClicked" BackgroundColor="Gray" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</mauiPopup:BasePopupPage>

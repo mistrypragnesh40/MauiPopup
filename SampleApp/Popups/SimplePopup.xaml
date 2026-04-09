@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.SimplePopup">
+
+    <VerticalStackLayout Padding="20" Spacing="15" WidthRequest="300">
+        <Label Text="Simple Popup"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="This is a basic popup with no return value. Tap the background or press the button to close."
+               HorizontalTextAlignment="Center" />
+
+        <Button Text="Close"
+                Clicked="OnCloseClicked"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</mauiPopup:BasePopupPage>

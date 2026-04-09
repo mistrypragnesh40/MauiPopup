@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.ColorDemoPopup">
+
+    <VerticalStackLayout Padding="25" Spacing="12" WidthRequest="300">
+        <Label x:Name="TitleLabel"
+               FontSize="18" FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="DescriptionLabel"
+               FontSize="13"
+               HorizontalTextAlignment="Center" />
+
+        <BoxView HeightRequest="1" Color="LightGray" />
+
+        <Label x:Name="FgLabel" FontSize="11" TextColor="Gray" />
+        <Label x:Name="OvLabel" FontSize="11" TextColor="Gray" />
+
+        <Button Text="Close" Clicked="OnCloseClicked"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</mauiPopup:BasePopupPage>

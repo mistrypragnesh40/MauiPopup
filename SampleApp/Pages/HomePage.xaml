@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.HomePage"
+             Title="Plugin.Maui.Popup v2.0">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="12">
+
+            <Label Text="Plugin.Maui.Popup"
+                   FontSize="28" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="v2.0 — Platform-Native Popups"
+                   FontSize="16" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,15" />
+
+            <Button Text="Basic Popups"
+                    Clicked="OnBasicClicked"
+                    HeightRequest="50" />
+
+            <Button Text="Animations"
+                    Clicked="OnAnimationsClicked"
+                    HeightRequest="50" />
+
+            <Button Text="Layouts"
+                    Clicked="OnLayoutsClicked"
+                    HeightRequest="50" />
+
+            <Button Text="Advanced"
+                    Clicked="OnAdvancedClicked"
+                    HeightRequest="50" />
+
+            <Button Text="Colors"
+                    Clicked="OnColorsClicked"
+                    HeightRequest="50" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,5" />
+
+            <Label Text="New in v2.0"
+                   FontSize="18" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Button Text="CornerRadius"
+                    Clicked="OnCornerRadiusClicked"
+                    BackgroundColor="#4CAF50" TextColor="White"
+                    HeightRequest="50" />
+
+            <Button Text="ContentPadding"
+                    Clicked="OnContentPaddingClicked"
+                    BackgroundColor="#4CAF50" TextColor="White"
+                    HeightRequest="50" />
+
+            <Button Text="AutoCloseAfter"
+                    Clicked="OnAutoCloseClicked"
+                    BackgroundColor="#4CAF50" TextColor="White"
+                    HeightRequest="50" />
+
+            <Button Text="CloseAllPopups"
+                    Clicked="OnCloseAllClicked"
+                    BackgroundColor="#4CAF50" TextColor="White"
+                    HeightRequest="50" />
+
+            <Button Text="OnDismissed Event"
+                    Clicked="OnDismissedClicked"
+                    BackgroundColor="#4CAF50" TextColor="White"
+                    HeightRequest="50" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.DismissedEventPage"
+             Title="OnDismissed Event">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="OnDismissed Event"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Subscribe to the Dismissed event to get notified when a popup closes, with the return value."
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="Dismissed Event with Result" FontAttributes="Bold" />
+            <Label Text="Opens a string-return popup. The Dismissed event fires when it closes."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Show Popup with Dismissed Event" Clicked="OnDismissedEventClicked" />
+            <Label x:Name="DismissedResultLabel" Text="Dismissed result: (none)" TextColor="Gray" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.AutoClosePage"
+             Title="AutoCloseAfter">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="AutoCloseAfter"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Popup auto-closes after a set duration. Timer is cancelled if closed manually."
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="3 Second Auto-Close" FontAttributes="Bold" />
+            <Label Text="Popup disappears after 3 seconds."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Auto Close in 3s" Clicked="OnAutoClose3sClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="5 Second Auto-Close" FontAttributes="Bold" />
+            <Label Text="Popup disappears after 5 seconds."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Auto Close in 5s" Clicked="OnAutoClose5sClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

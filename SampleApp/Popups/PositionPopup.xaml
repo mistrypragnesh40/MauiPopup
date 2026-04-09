@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.PositionPopup">
+
+    <Frame Padding="20" CornerRadius="0" WidthRequest="350">
+        <VerticalStackLayout Spacing="10">
+            <Label Text="Bottom Sheet Style"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="This popup is positioned at the bottom with custom margin, simulating a bottom sheet."
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Got it!" Clicked="OnCloseClicked" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </Frame>
+
+</mauiPopup:BasePopupPage>

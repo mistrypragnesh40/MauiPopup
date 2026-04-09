@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.MainPage"
+             Title="Plugin.Maui.Popup Test">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Plugin.Maui.Popup v2.0"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Platform-Native Popup Test App"
+                   FontSize="14"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <!-- Test 1: Simple Popup -->
+            <Label Text="1. Basic Popup (background dismiss)" FontAttributes="Bold" />
+            <Button Text="Show Simple Popup"
+                    Clicked="OnSimplePopupClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <!-- Test 2: Return String -->
+            <Label Text="2. Return String Value" FontAttributes="Bold" />
+            <Button Text="Show String Popup"
+                    Clicked="OnReturnStringClicked" />
+            <Label x:Name="StringResultLabel"
+                   Text="Result: (none)"
+                   TextColor="Gray" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <!-- Test 3: Return Typed Object -->
+            <Label Text="3. Return Typed Object (UserInfo)" FontAttributes="Bold" />
+            <Button Text="Show Object Popup"
+                    Clicked="OnReturnObjectClicked" />
+            <Label x:Name="ObjectResultLabel"
+                   Text="Result: (none)"
+                   TextColor="Gray" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <!-- Test 4: Position (Bottom Sheet) -->
+            <Label Text="4. Positioned Popup (Bottom)" FontAttributes="Bold" />
+            <Button Text="Show Bottom Popup"
+                    Clicked="OnPositionPopupClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <!-- Test 5: Stacked Popups -->
+            <Label Text="5. Stacked Popups (open multiple)" FontAttributes="Bold" />
+            <Button Text="Show Stacked Popup"
+                    Clicked="OnStackedPopupClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <!-- Test 6: Return Bool -->
+            <Label Text="6. Return Bool (Confirm Dialog)" FontAttributes="Bold" />
+            <Button Text="Show Confirm Popup"
+                    Clicked="OnConfirmPopupClicked" />
+            <Label x:Name="BoolResultLabel"
+                   Text="Result: (none)"
+                   TextColor="Gray" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <!-- Test 7: Animations -->
+            <Label Text="7. Animation Types" FontAttributes="Bold" FontSize="18" />
+
+            <Button Text="Fade (Default)"
+                    Clicked="OnFadeAnimationClicked" />
+
+            <Button Text="Scale (Zoom In/Out)"
+                    Clicked="OnScaleAnimationClicked" />
+
+            <Button Text="Slide Up"
+                    Clicked="OnSlideUpAnimationClicked" />
+
+            <Button Text="Slide Down"
+                    Clicked="OnSlideDownAnimationClicked" />
+
+            <Button Text="No Animation (Instant)"
+                    Clicked="OnNoAnimationClicked" />
+
+            <Button Text="Slow Fade (400ms)"
+                    Clicked="OnSlowFadeClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

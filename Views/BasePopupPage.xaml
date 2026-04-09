@@ -6,17 +6,23 @@
              Title="BasePopupPage">
     <ContentPage.ControlTemplate>
         <ControlTemplate>
-            <Grid BackgroundColor="Transparent">
-                <ContentPresenter Grid.Row="0"  VerticalOptions="{Binding Source={x:Reference this},Path=VerticalOptions}"   
-                              HorizontalOptions="{Binding Source={x:Reference this},Path=HorizontalOptions}" 
-                             BackgroundColor="{Binding Source={x:Reference this},Path=ForegroundColor}"  Margin="{Binding Source={x:Reference this},Path=Margin}">
-
-                    <ContentPresenter.GestureRecognizers>
-                        <TapGestureRecognizer  />
-                    </ContentPresenter.GestureRecognizers>
-                </ContentPresenter>
+            <Grid BackgroundColor="{Binding Source={x:Reference this},Path=OverlayColor}">
+                <Border VerticalOptions="{Binding Source={x:Reference this},Path=VerticalOptions}"
+                        HorizontalOptions="{Binding Source={x:Reference this},Path=HorizontalOptions}"
+                        BackgroundColor="{Binding Source={x:Reference this},Path=ForegroundColor}"
+                        Margin="{Binding Source={x:Reference this},Path=Margin}"
+                        Padding="{Binding Source={x:Reference this},Path=ContentPadding}"
+                        Stroke="Transparent"
+                        StrokeThickness="0"
+                        StrokeShape="{Binding Source={x:Reference this},Path=PopupStrokeShape}">
+                    <ContentPresenter>
+                        <ContentPresenter.GestureRecognizers>
+                            <TapGestureRecognizer />
+                        </ContentPresenter.GestureRecognizers>
+                    </ContentPresenter>
+                </Border>
                 <Grid.GestureRecognizers>
-                    <TapGestureRecognizer  Command="{Binding Source={x:Reference this},Path=PopModelCommand}" />
+                    <TapGestureRecognizer Command="{Binding Source={x:Reference this},Path=PopModelCommand}" />
                 </Grid.GestureRecognizers>
             </Grid>
         </ControlTemplate>

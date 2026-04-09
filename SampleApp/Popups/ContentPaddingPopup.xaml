@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mauiPopup:BasePopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         xmlns:mauiPopup="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+                         x:Class="SampleApp.Popups.ContentPaddingPopup">
+
+    <VerticalStackLayout Spacing="15" WidthRequest="300">
+        <Label Text="Padded Popup"
+               FontSize="20" FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="PaddingLabel"
+               HorizontalTextAlignment="Center"
+               TextColor="Gray" />
+
+        <Label Text="ContentPadding adds inner spacing between the popup border and its content — without needing extra layout wrappers."
+               HorizontalTextAlignment="Center"
+               FontSize="13" />
+
+        <Button Text="Close"
+                Clicked="OnCloseClicked"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</mauiPopup:BasePopupPage>

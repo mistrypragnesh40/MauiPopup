@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.LayoutPage"
+             Title="Layouts">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Layouts"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Popup positioning options"
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="Center (Default)" FontAttributes="Bold" />
+            <Button Text="Show Center Popup" Clicked="OnCenterClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Top" FontAttributes="Bold" />
+            <Button Text="Show Top Popup" Clicked="OnTopClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Bottom" FontAttributes="Bold" />
+            <Button Text="Show Bottom Popup" Clicked="OnBottomClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Left (Start)" FontAttributes="Bold" />
+            <Button Text="Show Left Popup" Clicked="OnLeftClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Right (End)" FontAttributes="Bold" />
+            <Button Text="Show Right Popup" Clicked="OnRightClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Top-Left Corner" FontAttributes="Bold" />
+            <Button Text="Show Top-Left Popup" Clicked="OnTopLeftClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Bottom-Right Corner" FontAttributes="Bold" />
+            <Button Text="Show Bottom-Right Popup" Clicked="OnBottomRightClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Full Width Bottom (Bottom Sheet)" FontAttributes="Bold" />
+            <Button Text="Show Bottom Sheet" Clicked="OnBottomSheetClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.CornerRadiusPage"
+             Title="CornerRadius">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="CornerRadius"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Round the popup corners without wrapping content in a Frame."
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="Uniform Radius" FontAttributes="Bold" />
+            <Label Text="All 4 corners with same radius (20)."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="CornerRadius = 20" Clicked="OnUniformClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Top Corners Only" FontAttributes="Bold" />
+            <Label Text="Only top-left and top-right rounded (20, 20, 0, 0)."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Top Only (20, 20, 0, 0)" Clicked="OnTopOnlyClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Large Radius" FontAttributes="Bold" />
+            <Label Text="Very rounded corners (40)."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="CornerRadius = 40" Clicked="OnLargeClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,57 +1,75 @@
-﻿using MauiPopup.Views;
+using MauiPopup.Services;
+using MauiPopup.Views;
 
 namespace MauiPopup
 {
-    // All the code in this file is included in all platforms.
     public class PopupAction
     {
-        public static async Task<T> DisplayPopup<T>(BasePopupPage page) where T : new()
+        /// <summary>
+        /// Display a popup and return a typed result.
+        /// </summary>
+        public static async Task<T> DisplayPopup<T>(BasePopupPage page)
         {
             try
             {
-                if (Application.Current?.MainPage != null)
-                    await Application.Current.MainPage.Navigation.PushModalAsync(page);
-
-                return (T)await page.returnResultTask.Task;
+                await PopupManager.ShowAsync(page);
+                var result = await page.returnResultTask.Task;
+                return result is T typed ? typed : default;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return default(T);
+                return default;
             }
         }
 
+        /// <summary>
+        /// Display a popup and return a string result.
+        /// </summary>
         public static async Task<string> DisplayPopup(BasePopupPage page)
         {
             try
             {
-                if (Application.Current?.MainPage != null)
-                    await Application.Current.MainPage.Navigation.PushModalAsync(page);
-
-                return (string)await page.returnResultTask.Task;
+                await PopupManager.ShowAsync(page);
+                var result = await page.returnResultTask.Task;
+                return result as string ?? "";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "";
             }
-
         }
 
+        /// <summary>
+        /// Close the topmost popup with an optional return value.
+        /// </summary>
         public static async Task ClosePopup(object returnValue = null)
         {
-            if (Application.Current?.MainPage != null && Application.Current.MainPage.Navigation.ModalStack.Count > 0)
+            try
             {
-                try
-                {
-                    var currentPage = (BasePopupPage)Application.Current.MainPage.Navigation.ModalStack.LastOrDefault();
-                    currentPage?.returnResultTask.TrySetResult(returnValue);
-                }
-                catch (Exception ex)
-                {
-
-                }
-                await Application.Current.MainPage.Navigation.PopModalAsync();
+                await PopupManager.CloseCurrentAsync(returnValue);
+            }
+            catch (Exception)
+            {
             }
         }
 
+        /// <summary>
+        /// Close all open popups at once, from top to bottom.
+        /// </summary>
+        public static async Task CloseAllPopups()
+        {
+            try
+            {
+                await PopupManager.CloseAllAsync();
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        /// <summary>
+        /// Returns true if any popup is currently open.
+        /// </summary>
+        public static bool IsPopupOpen => PopupManager.IsPopupOpen;
     }
 }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleApp.Pages.AdvancedPage"
+             Title="Advanced">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Advanced"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Full page, half page, and sheet popups"
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="1" Color="LightGray" Margin="0,10" />
+
+            <Label Text="Full Page Popup" FontAttributes="Bold" />
+            <Label Text="Covers entire screen with header, content, and footer. Scale animation."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Show Full Page Popup" Clicked="OnFullPageClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Half Page — Top" FontAttributes="Bold" />
+            <Label Text="Covers top half of screen. Slides down from top."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Show Top Half Popup" Clicked="OnHalfTopClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Half Page — Bottom" FontAttributes="Bold" />
+            <Label Text="Covers bottom half of screen. Slides up like a bottom sheet."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Show Bottom Half Popup" Clicked="OnHalfBottomClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Notification Banner" FontAttributes="Bold" />
+            <Label Text="Small popup at top, auto-positioned. Slides down."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Show Notification" Clicked="OnNotificationClicked" />
+
+            <BoxView HeightRequest="1" Color="LightGray" />
+
+            <Label Text="Side Panel (Right)" FontAttributes="Bold" />
+            <Label Text="Panel anchored to the right edge."
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="Show Side Panel" Clicked="OnSidePanelClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
